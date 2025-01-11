@@ -61,7 +61,6 @@ public class StateManager : Singleton<StateManager>
             }
         }
 
-        ChangeState(State.RoundStart);
         UIManager.I.SendPEvent(PEvent.Init);
     }
 }

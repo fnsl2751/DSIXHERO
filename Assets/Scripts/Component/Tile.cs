@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        TurnController.I.CurrentTurnChara.ForceMoveTileTo(this);
         Debug.Log(Pos);
     }
 }
