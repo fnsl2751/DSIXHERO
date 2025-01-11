@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DefineCommons;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -39,6 +40,11 @@ public class GameManager : Singleton<GameManager>
         if(!MainCamera.gameObject.activeSelf) MainCamera.gameObject.SetActive(true);
 
         Debug.Log($"Active Scene : {SceneManager.GetActiveScene().name}");
+
+        if(SceneManager.GetActiveScene().name == "Map_Sample")
+        {
+            StateManager.I.ChangeState(State.RoundStart);
+        }
     }
 
 

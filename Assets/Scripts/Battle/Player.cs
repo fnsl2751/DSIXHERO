@@ -4,20 +4,8 @@ using UnityEngine;
 
 public class Player : Character
 {
-    public override void DebuffEffect()
+    private void Start()
     {
-
-    }
-    public override void ActingDice()
-    {
-
-    }
-    public override void UseSkill()
-    {
-
-    }
-    public override void TurnEnd()
-    {
-
+        MoveCount = 1;
     }
 }
